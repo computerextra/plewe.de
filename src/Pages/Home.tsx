@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
-import { Ambulance, Clock, Mail, Phone } from "lucide-react";
+import { Ambulance, Clock, Mail, Navigation, Phone } from "lucide-react";
 import { NavLink } from "react-router";
 
 export default function Home() {
@@ -17,10 +17,21 @@ export default function Home() {
     <div className="mt-10">
       {/* TODO: Webseite muss komplett Barierefrei sein! */}
       <h1>Willkommen</h1>
-      <h2 className="text-center max-w-lg mx-auto">
-        auf der Webseite der Kinderzahnarztpraxis Dr. Andrea Plewe & Dr. Jens
-        Plewe
-      </h2>
+      <div className="w-max mx-auto px-3 relative h-max">
+        <img
+          src="/img.png"
+          className="object-contain max-w-30 h-auto absolute bottom-0 right-0 translate-x-[-40%] translate-y-[45%] opacity-85 -rotate-12"
+        />
+        <h2 className="text-center max-w-lg mx-auto relative z-20">
+          auf der Webseite der <span className="text-red-600">K</span>
+          <span className="text-yellow-500 font-serif">i</span>
+          <span className="text-green-400 font-serif">n</span>
+          <span className="text-indigo-600 font-serif">d</span>
+          <span className="text-orange-400 font-serif">e</span>
+          <span className="text-sky-600 font-serif">r</span>
+          zahnarztpraxis Dr. Andrea Plewe & Dr. Jens Plewe
+        </h2>
+      </div>
       <div className="grid grid-cols-4 gap-8 mt-10">
         {/* Leistungen */}
         <Card className="col-span-2 row-span-2">
@@ -55,18 +66,28 @@ export default function Home() {
               <Mail className="w-10 h-10" /> Ihr Kontakt zu uns
             </CardTitle>
           </CardHeader>
-          <CardContent className="grid grid-cols-2 gap-8">
-            <Button asChild>
-              <a href="#">
-                <Phone /> 0561 / 123 456
-              </a>
-            </Button>
-            <Button asChild>
-              <NavLink to="/Kontakt">
-                <Mail />
-                Kontaktformular
-              </NavLink>
-            </Button>
+          <CardContent>
+            <div className="flex items-center gap-2">
+              <Navigation className="w-6 h-6" />
+              <div className="flex flex-col gap-0">
+                <span>Wolfhager Strasse 380</span>
+                <span> 34128 Kassel</span>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-8 pt-4">
+              <Button asChild>
+                <a href="#">
+                  <Phone /> 0561 / 123 456
+                </a>
+              </Button>
+              <Button asChild>
+                <NavLink to="/Kontakt">
+                  <Mail />
+                  Kontaktformular
+                </NavLink>
+              </Button>
+            </div>
           </CardContent>
         </Card>
         {/* CTA - Öffnungszeiten */}
