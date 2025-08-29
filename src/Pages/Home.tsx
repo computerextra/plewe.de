@@ -10,7 +10,7 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import Fade from "embla-carousel-fade";
 import { Ambulance, Clock, Mail, Phone } from "lucide-react";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 
 export default function Home() {
   return (
@@ -62,10 +62,10 @@ export default function Home() {
               </a>
             </Button>
             <Button asChild>
-              <Link to="/Kontakt">
+              <NavLink to="/Kontakt">
                 <Mail />
                 Kontaktformular
-              </Link>
+              </NavLink>
             </Button>
           </CardContent>
         </Card>

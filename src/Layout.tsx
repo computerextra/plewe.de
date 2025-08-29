@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router";
+import { NavLink, Outlet } from "react-router";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -22,7 +22,7 @@ export default function Layout() {
                   asChild
                   className={navigationMenuTriggerStyle()}
                 >
-                  <Link to="/">Startseite</Link>
+                  <NavLink to="/">Startseite</NavLink>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -30,7 +30,7 @@ export default function Layout() {
                   asChild
                   className={navigationMenuTriggerStyle()}
                 >
-                  <Link to="/Kontakt">Kontakt</Link>
+                  <NavLink to="/Kontakt">Kontakt</NavLink>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -45,7 +45,7 @@ export default function Layout() {
                   >
                     Datenschutz
                   </a>
-                  {/* <Link to="/Datenschutz">Datenschutz</Link> */}
+                  {/* <NavLink to="/Datenschutz">Datenschutz</NavLink> */}
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -53,7 +53,7 @@ export default function Layout() {
                   asChild
                   className={navigationMenuTriggerStyle()}
                 >
-                  {/* <Link to="/Impressum">Impressum</Link> */}
+                  {/* <NavLink to="/Impressum">Impressum</NavLink> */}
                   <a
                     href="https://computer-extra.de/Impressum"
                     target="_blank"
