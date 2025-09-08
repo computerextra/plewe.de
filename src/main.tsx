@@ -6,7 +6,6 @@ import Layout from "./Layout";
 import Datenschutz from "./Pages/Datenschutz";
 import Home from "./Pages/Home";
 import Impressum from "./Pages/Impressum";
-import Kontakt from "./Pages/Kontakt";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -14,7 +13,6 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="Kontakt" element={<Kontakt />} />
           <Route path="Datenschutz" element={<Datenschutz />} />
           <Route path="Impressum" element={<Impressum />} />
           <Route
